@@ -1,0 +1,145 @@
+{% extends "base.html" %}
+
+{% block title %}Spendly — Privacy Policy{% endblock %}
+
+{% block content %}
+<section class="legal-section">
+    <div class="legal-inner">
+        <header class="legal-header">
+            <h1 class="legal-title">Privacy Policy</h1>
+            <p class="legal-meta">Last updated: November 25, 2026</p>
+        </header>
+
+        <article class="legal-content">
+            <section class="legal-block">
+                <h2>1. Data We Collect</h2>
+                <p>
+                    Spendly collects the following categories of data to provide and improve the Service:
+                </p>
+                <ul>
+                    <li><strong>Account Information:</strong> Email address, hashed password, and display name provided during registration.</li>
+                    <li><strong>Expense Data:</strong> All expenses you enter, including amount, category, date, description, and any notes you add.</li>
+                    <li><strong>Usage Data:</strong> Interaction data such as pages visited, features used, session duration, and device information (browser type, operating system, IP address).</li>
+                    <li><strong>Communication Data:</strong> If you contact support, we collect your email address and the content of your messages.</li>
+                </ul>
+                <p>
+                    We do not collect sensitive personal information such as government IDs, financial account numbers, or precise geolocation data.
+                </p>
+            </section>
+
+            <section class="legal-block">
+                <h2>2. How We Use Your Data</h2>
+                <p>
+                    Your data is used solely for the following purposes:
+                </p>
+                <ul>
+                    <li><strong>Providing the Service:</strong> Storing and displaying your expenses, generating summaries, and enabling category filtering.</li>
+                    <li><strong>Account Management:</strong> Authenticating you, maintaining your session, and securing your account.</li>
+                    <li><strong>Improving the Service:</strong> Analyzing usage patterns (in aggregate, anonymized form) to fix bugs, optimize performance, and prioritize new features.</li>
+                    <li><strong>Communication:</strong> Responding to support inquiries and sending important service updates (e.g., security notices, terms changes).</li>
+                    <li><strong>Legal Compliance:</strong> Fulfilling legal obligations, enforcing our Terms, and protecting our rights and safety.</li>
+                </ul>
+                <p>
+                    We do not use your expense data for advertising, profiling, or automated decision-making that significantly affects you.
+                </p>
+            </section>
+
+            <section class="legal-block">
+                <h2>3. Data Storage</h2>
+                <p>
+                    All data is stored in a local SQLite database on the server where Spendly is hosted. We implement the following safeguards:
+                </p>
+                <ul>
+                    <li>Passwords are hashed using industry-standard algorithms (bcrypt) — we never store plaintext passwords.</li>
+                    <li>Database connections enforce foreign key constraints to maintain data integrity.</li>
+                    <li>Access to the database file is restricted to the application process only.</li>
+                </ul>
+                <p>
+                    <strong>Data Retention:</strong> We retain your account and expense data for as long as your account exists. You may delete your account at any time, which permanently removes all associated data within 30 days. Backups are retained for up to 90 days for disaster recovery purposes only.
+                </p>
+                <p>
+                    If you are a developer running Spendly locally, you have full control over the database file (<code>expense_tracker.db</code>) and can delete it at any time.
+                </p>
+            </section>
+
+            <section class="legal-block">
+                <h2>4. Third Party Services</h2>
+                <p>
+                    Spendly is designed to minimize third-party dependencies. Currently, we use:
+                </p>
+                <ul>
+                    <li><strong>Google Fonts:</strong> The DM Serif Display and DM Sans fonts are loaded from <code>fonts.googleapis.com</code> and <code>fonts.gstatic.com</code>. This request may log your IP address to Google. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
+                    <li><strong>YouTube (Optional):</strong> The demo video on the landing page embeds content from <code>youtube.com</code>. This loads only when you click "See How It Works" and may set cookies. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
+                </ul>
+                <p>
+                    We do not integrate analytics trackers (Google Analytics, Mixpanel, etc.), advertising networks, social media widgets, or third-party APIs that process your expense data.
+                </p>
+                <p>
+                    If we add third-party services in the future, we will update this policy and notify you at least 30 days in advance.
+                </p>
+            </section>
+
+            <section class="legal-block">
+                <h2>5. Your Rights</h2>
+                <p>
+                    Depending on your jurisdiction, you may have the following rights regarding your personal data:
+                </p>
+                <ul>
+                    <li><strong>Access:</strong> Request a copy of all data we hold about you.</li>
+                    <li><strong>Rectification:</strong> Correct inaccurate or incomplete data.</li>
+                    <li><strong>Erasure:</strong> Request deletion of your account and all associated data.</li>
+                    <li><strong>Portability:</strong> Receive your expense data in a structured, commonly used format (CSV/JSON).</li>
+                    <li><strong>Restriction:</strong> Request limitation of processing under certain circumstances.</li>
+                    <li><strong>Objection:</strong> Object to processing based on legitimate interests.</li>
+                </ul>
+                <p>
+                    To exercise any of these rights, contact us using the details in Section 7. We will respond within 30 days.
+                </p>
+            </section>
+
+            <section class="legal-block">
+                <h2>6. Data Security</h2>
+                <p>
+                    We implement appropriate technical and organizational measures to protect your data:
+                </p>
+                <ul>
+                    <li>HTTPS enforcement in production (TLS 1.2+).</li>
+                    <li>Secure session cookies with <code>HttpOnly</code> and <code>Secure</code> flags.</li>
+                    <li>CSRF protection on state-changing forms.</li>
+                    <li>Input validation and parameterized SQL queries to prevent injection.</li>
+                </ul>
+                <p>
+                    However, no method of transmission over the Internet or electronic storage is 100% secure. While we strive to protect your data, we cannot guarantee absolute security.
+                </p>
+            </section>
+
+            <section class="legal-block">
+                <h2>7. Contact</h2>
+                <p>
+                    If you have any questions about this Privacy Policy or our data practices, please contact us at:
+                </p>
+                <p class="contact-email">privacy@spendly.example.com</p>
+                <p>
+                    You may also reach us via the contact form in the app or by writing to:
+                </p>
+                <address class="contact-address">
+                    Spendly Privacy Team<br>
+                    123 Finance Street<br>
+                    Mumbai, Maharashtra 400001<br>
+                    India
+                </address>
+            </section>
+
+            <section class="legal-block">
+                <h2>8. Changes to This Policy</h2>
+                <p>
+                    We may update this Privacy Policy from time to time. If changes are material, we will provide at least thirty (30) days' notice by posting a prominent notice on the Service and/or emailing you at the address associated with your account.
+                </p>
+                <p>
+                    Your continued use of the Service after the effective date of any changes constitutes acceptance of the revised Policy. If you do not agree to the changes, you must stop using the Service and may delete your account.
+                </p>
+            </section>
+        </article>
+    </div>
+</section>
+{% endblock %}
